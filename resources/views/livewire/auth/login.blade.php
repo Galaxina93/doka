@@ -45,7 +45,7 @@
                                     autocomplete="email"
                                     required
                                     class="block w-full rounded-lg border border-gray-300 px-3 py-2 sm:text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 @error('email') border-red-500 @enderror"
-                                    placeholder="{{ $guard }}@felix-machts.de"
+                                    placeholder="{{ $guard }}@doka-hausservice.de"
                                     aria-invalid="{{ $errors->has('email') ? 'true' : 'false' }}"
                                     aria-describedby="email-error"
                                 >
@@ -236,7 +236,7 @@
 
             {{-- Optionaler Hinweis oder Footer --}}
             <div class="mt-6 text-center text-xs text-gray-500">
-                &copy; {{ date('Y') }} Felix-Machts. Alle Rechte vorbehalten.
+                &copy; {{ date('Y') }} doka-hausservice. Alle Rechte vorbehalten.
             </div>
 
         </div>

@@ -31,8 +31,8 @@ class KalkulationKunde extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            from: new Address(env('MAIL_FROM_ADDRESS', 'alina@steinhauer.de'), 'Felix-Machts'),
-            replyTo: [new Address(env('MAIL_FROM_ADDRESS', 'alina@steinhauer.de'), 'Felix-Machts')],
+            from: new Address(env('MAIL_FROM_ADDRESS', 'alina@steinhauer.de'), 'doka-hausservice'),
+            replyTo: [new Address(env('MAIL_FROM_ADDRESS', 'alina@steinhauer.de'), 'doka-hausservice')],
             subject: 'Ihre Kalkulationsanfrage bei ' . config('app.name'),
         );
     }

@@ -99,7 +99,7 @@ return [
 
     'from' => [
         'address' => env('MAIL_FROM_ADDRESS', 'kontakt@doka-hausservice.de'),
-        'name' => env('MAIL_FROM_NAME', 'Felix-Machts'),
+        'name' => env('MAIL_FROM_NAME', 'doka-hausservice'),
     ],
 
     /*

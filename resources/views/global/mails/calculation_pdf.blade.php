@@ -136,7 +136,7 @@
     <p>
         Doka Hausservice · Heinrichstraße 12, 31224 Peine ·
         <a href="mailto:kontakt@doka-hausservice.de">kontakt@doka-hausservice.de</a> ·
-        <a href="https://felix-machts.com">felix-machts.com</a>
+        <a href="https://doka-hausservice.com">doka-hausservice.com</a>
     </p>
     <p>&copy; 2025 Doka Hausservice. Alle Rechte vorbehalten.</p>
 </div>

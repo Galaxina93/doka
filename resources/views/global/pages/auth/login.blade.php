@@ -4,7 +4,7 @@
 
             {{-- Logo --}}
             <a href="/" class="flex justify-center mb-8">
-                <img class="h-56" src="{{ asset('images/fmi/cropped-logo-felix.png') }}" alt="felix-machts">
+                <img class="h-56" src="{{ asset('images/fmi/cropped-logo-felix.png') }}" alt="doka-hausservice">
             </a>
 
             {{-- Login Card --}}

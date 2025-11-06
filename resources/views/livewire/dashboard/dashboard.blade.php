@@ -5,7 +5,7 @@
             Willkommen zurück, {{ auth()->user()->first_name }}!
         </h1>
         <p class="text-gray-600 dark:text-gray-300 mt-2">
-            Felix-Machts wünscht dir einen wunderschönen Tag!
+            doka-hausservice wünscht dir einen wunderschönen Tag!
         </p>
     </div>
 

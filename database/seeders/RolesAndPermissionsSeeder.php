@@ -58,7 +58,7 @@ class RolesAndPermissionsSeeder extends Seeder
 
         // 6. Kunden-Benutzer erstellen und die Kunden-Rolle zuweisen
         $customer = Customer::firstOrCreate(
-            ['email' => 'kunde@felix-machts.com'],
+            ['email' => 'kunde@doka-hausservice.com'],
             [
                 'first_name' => 'Kunde',
                 'last_name' => 'Machts',
@@ -69,7 +69,7 @@ class RolesAndPermissionsSeeder extends Seeder
 
         // 7. Mitarbeiter-Benutzer erstellen und die Mitarbeiter-Rolle zuweisen
         $employee = Employee::firstOrCreate(
-            ['email' => 'mitarbeiter@felix-machts.com'],
+            ['email' => 'mitarbeiter@doka-hausservice.com'],
             [
                 'first_name' => 'Mitarbeiter',
                 'last_name' => 'Machts',
