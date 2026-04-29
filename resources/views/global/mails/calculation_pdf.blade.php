@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
     <meta charset="utf-8">
-    <title>Anfragebestätigung – Doka Hausservice</title>
+    <title>Anfragebestätigung – Bollmann Hausservice</title>
     <style>
         body {
             font-family: DejaVu Sans, sans-serif;
@@ -94,8 +94,8 @@
 
 <!-- Header -->
 <div class="header">
-    <img src="{{ public_path('images/fmi/cropped-logo-felix.png') }}" alt="Doka Hausservice Logo">
-    <h1>Doka Hausservice – Anfragebestätigung</h1>
+    <img src="{{ public_path('images/fmi/cropped-logo-felix.png') }}" alt="Bollmann Hausservice Logo">
+    <h1>Bollmann Hausservice – Anfragebestätigung</h1>
 </div>
 
 <!-- Content -->
@@ -134,11 +134,11 @@
         Offizieller Partner des MTV Braunschweig
     </p>
     <p>
-        Doka Hausservice · Heinrichstraße 12, 31224 Peine ·
-        <a href="mailto:kontakt@doka-hausservice.de">kontakt@doka-hausservice.de</a> ·
-        <a href="https://doka-hausservice.com">doka-hausservice.com</a>
+        Bollmann Hausservice · Dahrenhorst 2, 31311 Uetze ·
+        <a href="mailto:kontakt@hausservice-bollmann.de">kontakt@hausservice-bollmann.de</a> ·
+        <a href="https://hausservice-bollmann.de">hausservice-bollmann.de</a>
     </p>
-    <p>&copy; 2025 Doka Hausservice. Alle Rechte vorbehalten.</p>
+    <p>&copy; 2025 Bollmann Hausservice. Alle Rechte vorbehalten.</p>
 </div>
 
 </body>

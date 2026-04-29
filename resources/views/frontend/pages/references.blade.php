@@ -8,7 +8,7 @@
                 <p class="text-lg text-gray-700 max-w-3xl mx-auto">
                     Wir suchen Talente, die mit uns gemeinsam unsere Vision umsetzen wollen.
                 </p>
-                <a href="mailto:kontakt@doka-hausservice.de"
+                <a href="mailto:kontakt@hausservice-bollmann.de"
                    class="mt-8 inline-block bg-primary text-white font-semibold py-3 px-8 rounded-lg hover:bg-primary-dark transition">
                     JETZT Bewerbung senden
                 </a>

@@ -9,24 +9,23 @@
                 <p><strong>Angaben gemäß § 5 TMG</strong></p>
 
                 <p>
-                    Doka Hausservice eGbR<br>
+                    Bollmann Hausservice<br>
                     Dahrenhorst 2<br>
                     31311 Uetze<br>
                     Deutschland
                 </p>
 
                 <p><strong>Vertreten durch:</strong><br>
-                    Karsten Bollmann<br>
-                    Dominik Jung
+                    Karsten Bollmann
                 </p>
 
                 <p><strong>Kontakt:</strong><br>
-                    Telefon: <a href="tel:+4917654630078" class="text-primary hover:underline">+49 176 5463 0078</a><br>
-                    E-Mail: <a href="mailto:kontakt@doka-hausservice.de" class="text-primary hover:underline">kontakt@doka-hausservice.de</a>
+                    Telefon: <a href="tel:+491741933640" class="text-primary hover:underline">+49 174 1933640</a><br>
+                    E-Mail: <a href="mailto:kontakt@hausservice-bollmann.de" class="text-primary hover:underline">kontakt@hausservice-bollmann.de</a>
                 </p>
 
                 <p><strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong><br>
-                    Karsten Bollmann & Dominik Jung<br>
+                    Karsten Bollmann<br>
                     Dahrenhorst 2<br>
                     31311 Uetze
                 </p>

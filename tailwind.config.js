@@ -20,9 +20,10 @@ module.exports = {
                 },
             },
             colors: {
-                primary: '#C72026',        // kräftiges Rot ähnlich dem im Logo
-                'primary-dark': '#9A1A1F', // dunkleres Rot für Hover/Schattierung
-                'primary-light': '#E05A5F' // helleres Rot für Akzente
+                primary: '#0C92F5',
+                'primary-dark': '#097ACD',
+                'primary-light': '#3CACF7',
+                'accent-blue': '#00509B'
             }
         },
     },

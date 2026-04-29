@@ -16,27 +16,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         {{-- SEO Meta --}}
-        <title>@yield('title', 'Doka Hausservice – Hausmeisterdienst in Braunschweig & Peine')</title>
-        <meta name="description" content="Doka Hausservice – Ihr zuverlässiger und transparenter Hausmeisterdienst in Braunschweig & Peine. Persönlich, schnell und lösungsorientiert.">
+        <title>@yield('title', 'Bollmann Hausservice – Hausmeisterdienst in Braunschweig & Peine')</title>
+        <meta name="description" content="Bollmann Hausservice – Ihr zuverlässiger und transparenter Hausmeisterdienst in Braunschweig & Peine. Persönlich, schnell und lösungsorientiert.">
         <meta name="keywords" content="Hausmeisterdienst, Braunschweig, Peine, Reinigung, Objektbetreuung, Immobilienservice, Facility Management">
         <meta name="robots" content="index, follow">
-        <meta name="author" content="Doka Hausservice eGbR">
+        <meta name="author" content="Bollmann Hausservice">
 
         <!-- Canonical -->
         <link rel="canonical" href="{{ url()->current() }}">
 
         <!-- Open Graph -->
         <meta property="og:type" content="website">
-        <meta property="og:title" content="Doka Hausservice – Hausmeisterdienst Braunschweig & Peine">
+        <meta property="og:title" content="Bollmann Hausservice – Hausmeisterdienst Braunschweig & Peine">
         <meta property="og:description" content="Zuverlässiger Hausmeisterdienst – Garten, Technik, Reinigung, 360° Service">
         <meta property="og:url" content="{{ url()->current() }}">
-        <meta property="og:site_name" content="Doka Hausservice">
+        <meta property="og:site_name" content="Bollmann Hausservice">
         <meta property="og:image" content="{{ asset('images/logo/felix_logo.png') }}">
 
         <!-- X (Twitter) Card -->
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@FelixMachts">
-        <meta name="twitter:title" content="Doka Hausservice – Hausmeisterdienst">
+        <meta name="twitter:title" content="Bollmann Hausservice – Hausmeisterdienst">
         <meta name="twitter:description" content="Zuverlässiger Hausmeisterservice in Peine & Braunschweig">
         <meta name="twitter:image" content="{{ asset('images/logo/felix_logo.png') }}">
 

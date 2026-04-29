@@ -2,11 +2,11 @@
     <!-- Navigation -->
     <nav class="bg-primary shadow-lg fixed w-full top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
+            <div class="flex justify-between items-center h-32">
                 <!-- Logo -->
                 <div class="flex items-center">
                     <a href="/" class="flex items-center gap-2">
-                        <img src="{{ URL::to('/images/logo/logo.png') }}" alt="Doka Hausservice Logo" class="h-20">
+                        <img src="{{ URL::to('/images/logo/logo.png') }}" alt="Bollmann Hausservice Logo" class="h-32">
                     </a>
                 </div>
 

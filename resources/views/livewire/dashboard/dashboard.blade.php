@@ -5,7 +5,7 @@
             Willkommen zurück, {{ auth()->user()->first_name }}!
         </h1>
         <p class="text-gray-600 dark:text-gray-300 mt-2">
-            doka-hausservice wünscht dir einen wunderschönen Tag!
+            Bollmann Hausservice wünscht dir einen wunderschönen Tag!
         </p>
     </div>
 

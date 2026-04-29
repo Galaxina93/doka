@@ -36,11 +36,11 @@
                 <div>
                     <h2 class="text-2xl font-semibold">3. Allgemeine Hinweise und Pflichtinformationen</h2>
                     <p><strong>Verantwortliche Stelle:</strong><br>
-                        Doka Hausservice eGbR<br>
+                        Bollmann Hausservice<br>
                         Dahrenhorst 2<br>
                         31311 Uetze<br>
-                        Telefon: +49 176 5463 0078<br>
-                        E-Mail: kontakt@doka-hausservice.de
+                        Telefon: +49 174 1933640<br>
+                        E-Mail: kontakt@hausservice-bollmann.de
                     </p>
                     <p><strong>Rechtsgrundlagen der Datenverarbeitung:</strong><br>
                         Art. 6 Abs. 1 lit. a, b, c und f DSGVO sowie § 25 TTDSG, abhängig vom jeweiligen Zweck.
