@@ -306,7 +306,7 @@
         </section>
 
         <!--References Section-->
-        <section id="reference" class="bg-white py-16 px-6 md:px-12">
+        <section id="reference" class="hidden bg-white py-16 px-6 md:px-12">
             <div class="max-w-7xl mx-auto text-center mb-12">
                 <h2 class="text-4xl font-bold text-gray-900 mb-4">Was wir schon gemacht haben</h2>
                 <p class="text-lg text-gray-700 max-w-3xl mx-auto">Ein kleiner Einblick in unsere Arbeiten. Alle aufgezeigten Tätigkeiten wurden bei unterschiedlichen Kunden durchgeführt.</p>
