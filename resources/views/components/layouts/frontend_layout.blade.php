@@ -47,7 +47,7 @@
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
         <!-- cookieconsent -->
-        <link rel="stylesheet" href="{{ asset('lib/dp_cookieconsent/css/cookieconsent.css') }}">
+        <link rel="stylesheet" href="{{ asset('lib/dp_cookieconsent/css/cookieconsent.css') }}?v=2">
         <script type="module" src="{{ asset('lib/dp_cookieconsent/js/cookieconsent-config.js') }}"></script>
 
         {{-- Swiper --}}

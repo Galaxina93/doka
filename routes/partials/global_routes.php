@@ -4,9 +4,7 @@ use App\Models\PageVisit;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Request;
 
-Route::get('/', function () {
-    return view('frontend/pages/welcome');
-});
+
 Route::get('/application', function () {
     return view('frontend/pages/application');
 });

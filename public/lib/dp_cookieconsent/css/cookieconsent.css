@@ -56,15 +56,15 @@
     --cc-z-index: 2147483647;
 
     --cc-bg: #fff;
-    --cc-primary-color: #C72026;
+    --cc-primary-color: #0C92F5;
     --cc-secondary-color: #6b6170;
 
-    --cc-btn-primary-bg: #C72026;
+    --cc-btn-primary-bg: #0C92F5;
     --cc-btn-primary-color: #fff;
-    --cc-btn-primary-border-color: #C72026;
-    --cc-btn-primary-hover-bg: #9A1A1F;
+    --cc-btn-primary-border-color: #0C92F5;
+    --cc-btn-primary-hover-bg: #097ACD;
     --cc-btn-primary-hover-color: #fff;
-    --cc-btn-primary-hover-border-color: #9A1A1F;
+    --cc-btn-primary-hover-border-color: #097ACD;
 
     --cc-btn-secondary-bg: #f2eaf0;
     --cc-btn-secondary-color: var(--cc-primary-color);
@@ -77,7 +77,7 @@
 
     --cc-separator-border-color: #f3edf2;
 
-    --cc-toggle-on-bg: #C72026;
+    --cc-toggle-on-bg: #0C92F5;
     --cc-toggle-off-bg: #85607a;
     --cc-toggle-on-knob-bg: #fff;
     --cc-toggle-off-knob-bg: #fff;
@@ -182,52 +182,52 @@ html.disable--interaction.show--consent, html.disable--interaction.show--consent
 }
 
 .cc--darkmode {
-    --cc-bg: #1a0e14;
-    --cc-primary-color: #F2D1D3; /* angepasster heller Textton zum Rot */
-    --cc-secondary-color: #deb9d0;
+    --cc-bg: #0f172a;
+    --cc-primary-color: #f8fafc;
+    --cc-secondary-color: #cbd5e1;
 
-    --cc-btn-primary-bg: #C72026;
+    --cc-btn-primary-bg: #0C92F5;
     --cc-btn-primary-color: #ffffff;
-    --cc-btn-primary-border-color: #C72026;
-    --cc-btn-primary-hover-bg: #9A1A1F;
+    --cc-btn-primary-border-color: #0C92F5;
+    --cc-btn-primary-hover-bg: #097ACD;
     --cc-btn-primary-hover-color: #ffffff;
-    --cc-btn-primary-hover-border-color: #9A1A1F;
+    --cc-btn-primary-hover-border-color: #097ACD;
 
-    --cc-btn-secondary-bg: #3c2331;
+    --cc-btn-secondary-bg: #1e293b;
     --cc-btn-secondary-color: var(--cc-primary-color);
     --cc-btn-secondary-border-color: var(--cc-btn-secondary-bg);
-    --cc-btn-secondary-hover-bg: #502b3f;
+    --cc-btn-secondary-hover-bg: #334155;
     --cc-btn-secondary-hover-color: #fff;
-    --cc-btn-secondary-hover-border-color: #502b3f;
+    --cc-btn-secondary-hover-border-color: #334155;
 
-    --cc-separator-border-color: #4b2f3f;
+    --cc-separator-border-color: #334155;
 
-    --cc-toggle-on-bg: #C72026;
-    --cc-toggle-off-bg: #6c3e5d;
+    --cc-toggle-on-bg: #0C92F5;
+    --cc-toggle-off-bg: #475569;
     --cc-toggle-on-knob-bg: #fff;
     --cc-toggle-off-knob-bg: #fff;
     --cc-toggle-enabled-icon-color: #fff;
     --cc-toggle-disabled-icon-color: #fff;
 
-    --cc-toggle-readonly-bg: #442735;
-    --cc-toggle-readonly-knob-bg: #C72026;
+    --cc-toggle-readonly-bg: #1e293b;
+    --cc-toggle-readonly-knob-bg: #0C92F5;
     --cc-toggle-readonly-knob-icon-color: var(--cc-toggle-readonly-bg);
 
-    --cc-section-category-border: #3e2431;
-    --cc-cookie-category-block-bg: #3e2431;
+    --cc-section-category-border: #1e293b;
+    --cc-cookie-category-block-bg: #1e293b;
     --cc-cookie-category-block-border: var(--cc-section-category-border);
-    --cc-cookie-category-block-hover-bg: #503040;
-    --cc-cookie-category-block-hover-border: #503040;
+    --cc-cookie-category-block-hover-bg: #334155;
+    --cc-cookie-category-block-hover-border: #334155;
     --cc-cookie-category-expanded-block-bg: transparent;
-    --cc-cookie-category-expanded-block-hover-bg: #5c384a;
+    --cc-cookie-category-expanded-block-hover-bg: #475569;
 
-    --cc-overlay-bg: rgba(0, 0, 0, 0.7);
+    --cc-overlay-bg: rgba(15, 23, 42, 0.7);
     --cc-webkit-scrollbar-bg: var(--cc-section-category-border);
     --cc-webkit-scrollbar-hover-bg: var(--cc-btn-primary-hover-bg);
 
-    --cc-footer-bg: #190b15;
+    --cc-footer-bg: #020617;
     --cc-footer-color: var(--cc-secondary-color);
-    --cc-footer-border-color: #12070e;
+    --cc-footer-border-color: #0f172a;
 }
 
 
