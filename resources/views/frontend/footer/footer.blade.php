@@ -7,7 +7,6 @@
     <div class="relative z-10 max-w-7xl mx-auto py-10 px-6 lg:px-12 grid grid-cols-1 md:grid-cols-3 gap-10">
 
         <div>
-            <img src="{{ URL::to('/images/logo/logo.png') }}" alt="Bollmann Hausservice Logo" class="w-56 mb-4">
             <p class="text-gray-300 text-sm">Ihr Partner für professionellen Hausservice in Uetze und Umgebung.</p>
         </div>
 
