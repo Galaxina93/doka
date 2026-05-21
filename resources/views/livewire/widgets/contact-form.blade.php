@@ -15,12 +15,15 @@
                         </p>
 
                         <dl class="space-y-6 text-sm sm:text-base">
-                            <div class="flex items-start sm:items-center">
-                                <svg class="w-5 h-5 sm:w-6 sm:h-6 text-indigo-200 mr-3 mt-1 sm:mt-0" fill="none" stroke="currentColor" stroke-width="2"
+                            <div class="flex items-start">
+                                <svg class="w-5 h-5 sm:w-6 sm:h-6 text-indigo-200 mr-3 mt-1" fill="none" stroke="currentColor" stroke-width="2"
                                      stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
                                     <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
                                 </svg>
-                                <a href="tel:+491741933640" class="hover:text-indigo-300 break-all">+49 174 1933640</a>
+                                <div class="flex flex-col space-y-1">
+                                    <a href="tel:+491772739040" class="hover:text-indigo-300 break-all"><span class="font-medium text-indigo-200">Mobil:</span> +49 177 2739040</a>
+                                    <a href="tel:+4951734040062" class="hover:text-indigo-300 break-all"><span class="font-medium text-indigo-200">Büro:</span> 05173 - 404 00 62</a>
+                                </div>
                             </div>
                             <div class="flex items-start sm:items-center">
                                 <svg class="w-5 h-5 sm:w-6 sm:h-6 text-indigo-200 mr-3 mt-1 sm:mt-0" fill="none" stroke="currentColor" stroke-width="2"

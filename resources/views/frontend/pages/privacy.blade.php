@@ -39,7 +39,7 @@
                         Bollmann Hausservice<br>
                         Dahrenhorst 2<br>
                         31311 Uetze<br>
-                        Telefon: +49 174 1933640<br>
+                        Telefon: +49 177 2739040<br>
                         E-Mail: kontakt@hausservice-bollmann.de
                     </p>
                     <p><strong>Rechtsgrundlagen der Datenverarbeitung:</strong><br>

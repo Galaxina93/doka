@@ -33,8 +33,8 @@
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                             <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                         </svg>
-                        <a href="tel:+491741933640" class="hover:underline text-2xl">
-                            +49 174 1933640
+                        <a href="tel:+491772739040" class="hover:underline text-2xl">
+                            +49 177 2739040
                         </a>
                     </div>
 
@@ -204,24 +204,52 @@
         <!-- Team Section -->
         <section id="team" class="bg-gray-100 text-black py-24 px-6 lg:px-12">
             <header class="text-center mb-16">
-                <h2 class="text-primary font-bold text-3xl sm:text-4xl lg:text-5xl">Lernen Sie den Geschäftsführer kennen</h2>
+                <h2 class="text-primary font-bold text-3xl sm:text-4xl lg:text-5xl">Ihre Ansprechpartner</h2>
                 <p class="mt-4 text-gray-600 text-base max-w-3xl mx-auto">
-                    Karsten Bollmann ist Ihr direkter Ansprechpartner und Inhaber von Bollmann Hausservice.
+                    Ob vor Ort bei Ihnen oder in der Organisation im Hintergrund – wir sind gerne persönlich für Sie da.
                 </p>
             </header>
 
-            <div class="max-w-md mx-auto grid grid-cols-1 gap-8">
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
 
                 {{-- Teammitglied 1: Karsten Bollmann --}}
-                <article class="bg-white rounded-2xl shadow-lg p-8 text-center flex flex-col items-center">
+                <article class="bg-white rounded-2xl shadow-lg p-8 text-center flex flex-col items-center transform transition duration-300 hover:-translate-y-1 hover:shadow-xl">
                     <figure class="mb-6">
                         <img src="{{ URL::to('/images/doka/karsten_bollmann.jpg') }}" alt="Portrait von Karsten Bollmann" class="w-40 h-40 rounded-full object-cover mx-auto shadow-md">
                     </figure>
                     <h3 class="text-2xl font-bold text-gray-800 mb-2">Karsten Bollmann</h3>
                     <p class="text-primary font-semibold mb-4">Geschäftsführer & Inhaber</p>
-                    <p class="text-gray-600 mb-4 flex-1">
+                    <p class="text-gray-600 mb-6 flex-1">
                         Als Gründer von Bollmann Hausservice legt Karsten Bollmann höchsten Wert auf Qualität, Zuverlässigkeit und eine saubere Ausführung aller handwerklichen Tätigkeiten.
                     </p>
+                    <div class="mt-auto w-full">
+                        <a href="tel:+491772739040" class="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 bg-primary text-white text-sm font-semibold rounded-full hover:bg-primary-dark transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                            </svg>
+                            0177 - 273 90 40
+                        </a>
+                    </div>
+                </article>
+
+                {{-- Teammitglied 2: Jessica K. --}}
+                <article class="bg-white rounded-2xl shadow-lg p-8 text-center flex flex-col items-center transform transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+                    <figure class="mb-6">
+                        <img src="{{ URL::to('/images/doka/jessica_k.jpg') }}" alt="Portrait von Jessica K." class="w-40 h-40 rounded-full object-cover mx-auto shadow-md">
+                    </figure>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Jessica K.</h3>
+                    <p class="text-primary font-semibold mb-4">Ansprechpartnerin Büro</p>
+                    <p class="text-gray-600 mb-6 flex-1">
+                        Ihre erste Anlaufstelle für organisatorische Fragen, Terminvereinbarungen und Angebote im Bereich Büro. Sie sorgt zuverlässig für den reibungslosen Ablauf im Hintergrund.
+                    </p>
+                    <div class="mt-auto w-full">
+                        <a href="tel:+4951734040062" class="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 bg-primary text-white text-sm font-semibold rounded-full hover:bg-primary-dark transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                            </svg>
+                            05173 - 404 00 62
+                        </a>
+                    </div>
                 </article>
 
             </div>

@@ -20,7 +20,8 @@
                 </p>
 
                 <p><strong>Kontakt:</strong><br>
-                    Telefon: <a href="tel:+491741933640" class="text-primary hover:underline">+49 174 1933640</a><br>
+                    Telefon Mobil: <a href="tel:+491772739040" class="text-primary hover:underline">+49 177 2739040</a><br>
+                    Telefon Büro: <a href="tel:+4951734040062" class="text-primary hover:underline">05173 - 404 00 62</a><br>
                     E-Mail: <a href="mailto:kontakt@hausservice-bollmann.de" class="text-primary hover:underline">kontakt@hausservice-bollmann.de</a>
                 </p>
 

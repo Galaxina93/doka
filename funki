@@ -1,0 +1,279 @@
+#!/bin/bash
+
+# ==========================================
+# UMGEBUNGSERKENNUNG (Lokal vs. Stage/Live)
+# ==========================================
+if command -v docker &> /dev/null; then
+    IS_LOCAL=true
+    PREFIX_DEFAULT="docker compose exec laravel.test"
+    PREFIX_USER="docker compose exec --user $(id -u):$(id -g) laravel.test"
+else
+    IS_LOCAL=false
+    PREFIX_DEFAULT=""
+    PREFIX_USER=""
+fi
+
+# Helper-Funktion: Blockiert Docker-Befehle auf dem Live-Server
+require_local() {
+    if [ "$IS_LOCAL" = false ]; then
+        echo -e "⚠️  \033[1;33mHinweis:\033[0m Der Befehl '\033[1;32m$1\033[0m' steuert die Docker-Container und ist nur auf deinem lokalen Rechner verfügbar."
+        exit 1
+    fi
+}
+
+# Helper-Funktion: Repariert Datei-Berechtigungen und optimiert Caches
+run_rights() {
+    echo "🔐 Repariere Datei-Berechtigungen..."
+    if [ "$IS_LOCAL" = true ]; then
+        docker compose exec -u www-data laravel.test php artisan optimize:clear
+        docker compose exec -u root laravel.test bash -c "chown -R www-data:www-data storage/ bootstrap/cache/ && chmod -R 777 storage/ bootstrap/cache/"
+    else
+        php artisan optimize:clear
+        chmod -R 775 storage/ bootstrap/cache/
+    fi
+    echo "✅ Berechtigungen und Cache erfolgreich erneuert!"
+}
+
+# Helper-Funktion: Zeigt die lokale URL der App an
+show_url() {
+    local URL="http://localhost:8181"
+    if [ -f .env ]; then
+        local ENV_URL=$(grep -E "^APP_URL=" .env | cut -d'=' -f2 | tr -d '\r\n')
+        if [ -n "$ENV_URL" ]; then
+            URL="$ENV_URL"
+        fi
+    fi
+    echo -e "\n🌐 Die Webseite ist erreichbar unter: \033[1;36m$URL\033[0m\n"
+}
+
+case "$1" in
+    info)
+        echo -e "\n\033[1;34m✨ Funki - Dein intelligenter Projekt-Assistent ✨\033[0m"
+
+        if [ "$IS_LOCAL" = true ]; then
+            echo -e "Status: \033[1;32mLokale Entwicklungsumgebung (Docker erkannt)\033[0m\n"
+        else
+            echo -e "Status: \033[1;36mLive/Stage Server (Direktes PHP erkannt)\033[0m\n"
+        fi
+
+        echo -e "Hier ist eine Übersicht aller verfügbaren Befehle:\n"
+        echo -e "  \033[1;32m🚀 start\033[0m         Startet alle Docker-Container im Hintergrund."
+        echo -e "  \033[1;32m🛑 stop\033[0m          Stoppt alle laufenden Container sanft."
+        echo -e "  \033[1;32m🔄 restart\033[0m       Startet alle Docker-Container neu."
+        echo -e "  \033[1;32m🏗️ bauen\033[0m         Baut die Container (Images) komplett neu auf."
+        echo -e "  \033[1;32m💥 löschen\033[0m       Löscht alle Container und Volumes (Achtung: Datenbank wird resettet!)."
+        echo -e "  \033[1;32m🗄️ migrate\033[0m       Führt Laravel Migrationen und Datenbank-Seeder aus."
+        echo -e "  \033[1;32m🔑 key\033[0m           Generiert einen neuen Laravel Application Key."
+        echo -e "  \033[1;32m🗂️ storage\033[0m       Repariert und erneuert den öffentlichen Storage-Link restlos."
+        echo -e "  \033[1;32m📦 export\033[0m        Exportiert Projektdateien (z.B. 'funki export ticket, mail' oder 'funki export \"langer string\"')."
+        echo -e "  \033[1;32m🎨 templates\033[0m     Sichert UI-Vorlagen automatisch als persistente Seeder-Dateien."
+        echo -e "  \033[1;32m🗺️ aimap\033[0m         Generiert eine Architektur-Map (ai_map.md) für KI-Agenten."
+        echo -e "  \033[1;32m🧠 systemmap\033[0m     Generiert die Neurale System Brain Map für die 3D Fehleranalyse."
+        echo -e "  \033[1;32m⚙️ uploadlimit\033[0m   Setzt das PHP Upload-Limit im Container (z.B. 'funki uploadlimit 150M')."
+        echo -e "  \033[1;32m👷 worker\033[0m        Startet den Queue-Worker (für Mails, PDFs und Hintergrund-Jobs)."
+        echo -e "  \033[1;32m⏱️ clock\033[0m         Startet den internen System-Takt (führt z.B. automatische minütliche Abrufe aus)."
+        echo -e "  \033[1;32m🌐 websocket\033[0m     Starte den Reverb WebSocket-Server (Echtzeit-Verbindungen)."
+        echo -e "  \033[1;32m💾 backup\033[0m        Sichert die Datenbank als ZIP-Datei (Spatie Backup)."
+        echo -e "  \033[1;32m📧 mails\033[0m         Ruft per IMAP neue E-Mails von Konten ab."
+        echo -e "  \033[1;32m🤖 mailworker\033[0m    Lässt die KI autonom E-Mails lesen, sortieren und beantworten."
+        echo -e "  \033[1;32m📞 telefon\033[0m       Startet die KI-Telefonie Audio-Bridge (Twilio WebSocket)."
+        echo -e "  \033[1;32m🧪 test\033[0m          Führt automatisierte Tests aus (z.B. 'funki test --filter ShopProcessTest')."
+        echo -e "  \033[1;32m🔐 rights\033[0m        Repariert die Dateiberechtigungen (www-data) und leert Caches sicher."
+        echo -e "  \033[1;32m🧹 cache\033[0m         Leert alle Anwendungs- und System-Caches auf einen Schlag restlos aus."
+        echo -e "  \033[1;32m🛠️ artisan\033[0m       Führt beliebige Artisan-Befehle aus."
+        echo -e "  \033[1;32mℹ️ info\033[0m          Zeigt genau dieses schicke Hilfemenü an.\n"
+        echo -e "💡 \033[1;33mBeispiel:\033[0m funki artisan make:model Product -m"
+        echo -e "💡 \033[1;33mBeispiel:\033[0m funki export ticket, profil --short"
+        echo -e "💡 \033[1;33mBeispiel:\033[0m funki test --filter ShopProcessTest\n"
+        ;;
+    start)
+        require_local "start"
+        echo "🚀 Starte Funki..."
+        docker compose up -d
+        show_url
+        ;;
+    stop)
+        require_local "stop"
+        echo "🛑 Stoppe Funki..."
+        docker compose down
+        ;;
+    restart)
+        require_local "restart"
+        echo "🔄 Starte Funki neu..."
+        docker compose restart
+        show_url
+        ;;
+    bauen)
+        require_local "bauen"
+        echo "🏗️ Baue Funki neu..."
+        docker compose up -d --build
+        show_url
+        ;;
+    löschen)
+        require_local "löschen"
+        echo "💥 Lösche Funki (inkl. Volumes)..."
+        docker compose down -v
+        ;;
+    uploadlimit)
+        require_local "uploadlimit"
+        LIMIT=${2:-100M}
+        echo "⚙️ Setze PHP Upload-Limit im Container auf $LIMIT..."
+        docker compose exec -u root laravel.test bash -c "echo 'upload_max_filesize = $LIMIT' > /usr/local/etc/php/conf.d/99-uploads.ini && echo 'post_max_size = $LIMIT' >> /usr/local/etc/php/conf.d/99-uploads.ini"
+        docker compose restart laravel.test
+        echo "✅ Upload-Limit erfolgreich auf $LIMIT gesetzt!"
+        ;;
+    migrate)
+        echo "🗄️ Führe Migrationen und Seeder aus..."
+        $PREFIX_DEFAULT php artisan migrate:fresh --seed
+        run_rights
+        ;;
+    key)
+        echo "🔑 Führe Key Generate aus..."
+        $PREFIX_DEFAULT php artisan key:generate
+        ;;
+    storage)
+        echo "🗂️ Lösche alten Storage-Link restlos..."
+        $PREFIX_DEFAULT rm -rf public/storage
+        echo "🔗 Erstelle neuen Storage-Link..."
+        $PREFIX_DEFAULT php artisan storage:link
+        echo "✅ Storage-Link erfolgreich erneuert!"
+        ;;
+    export)
+        shift
+        OPTIONS=()
+        SEARCH_TERMS=()
+
+        # Argumente filtern (Flags vs Suchbegriffe)
+        for arg in "$@"; do
+            if [[ "$arg" == search=* ]]; then
+                SEARCH_TERMS+=("${arg#search=}")
+            elif [[ "$arg" == --* ]]; then
+                OPTIONS+=("$arg")
+            else
+                # Entfernt ein versehentliches Komma am Ende eines Wortes,
+                # falls der User "funki export wort1, wort2" tippt.
+                clean_arg=$(echo "$arg" | sed 's/,$//')
+                SEARCH_TERMS+=("$clean_arg")
+            fi
+        done
+
+        # Array der Suchbegriffe zu einem kommagetrennten String verbinden
+        if [ ${#SEARCH_TERMS[@]} -gt 0 ]; then
+            SEARCH_STRING=$(IFS=,; echo "${SEARCH_TERMS[*]}")
+            OPTIONS+=("--search=$SEARCH_STRING")
+        fi
+
+        echo "📦 Exportiere Projektdateien..."
+        $PREFIX_DEFAULT php artisan project:export "${OPTIONS[@]}"
+        ;;
+    templates)
+        echo "🎨 Exportiere UI Produkt-Vorlagen sicher in den Code..."
+        $PREFIX_DEFAULT php artisan shop:export-templates
+        ;;
+    aimap)
+        echo "🗺️ Generiere System-Architektur Map für KI Agenten..."
+        $PREFIX_DEFAULT php artisan ai:generate-map
+        ;;
+    systemmap)
+        echo "🧠 Generiere Neurale System Brain Map für die 3D Analyse..."
+        $PREFIX_DEFAULT php artisan system:brain:generate
+        ;;
+    worker)
+        echo "👷 Starte Funki Queue-Worker (lauscht auf Hintergrund-Jobs)..."
+        $PREFIX_DEFAULT php artisan queue:listen --timeout=900
+        ;;
+    clock)
+        echo "⏱️ Starte Funki Scheduler (führt zeitgesteuerte Cron-Jobs in Echtzeit aus)..."
+        $PREFIX_DEFAULT php artisan schedule:work
+        ;;
+    websocket)
+        echo "🌐 Starte Reverb WebSocket-Server..."
+        $PREFIX_DEFAULT php artisan reverb:start
+        ;;
+    mails)
+        echo "📧 Rufe neue E-Mails per IMAP ab..."
+        $PREFIX_DEFAULT php artisan crm:fetch-mails
+        ;;
+    mailworker)
+        shift
+        echo "🤖 Starte den autonomen KI-Mail-Worker (Funki)..."
+        $PREFIX_DEFAULT php artisan crm:ai-process-mails "$@"
+        ;;
+    telefon)
+        echo "📞 Starte die Echtzeit Audio-Bridge für Telefonie (Node.js)..."
+        echo "💡 Hinweis: Dieser Prozess muss aktiv bleiben, während telefoniert wird!"
+        node server-twilio.js
+        ;;
+    backup)
+        echo "💾 Erstelle sicheres Datenbank-Backup..."
+        $PREFIX_DEFAULT php artisan backup:run --only-db
+        echo "🔧 Repariere Zugriffsrechte für das Dashboard..."
+
+        if [ "$IS_LOCAL" = true ]; then
+            docker compose exec -u root laravel.test chmod -R 777 storage/
+        else
+            chmod -R 775 storage/
+        fi
+
+        echo "✅ Backup erfolgreich abgeschlossen!"
+        ;;
+    rights)
+        run_rights
+        ;;
+    cache)
+        echo "🧹 Leere alle Framework-Caches restlos aus..."
+        $PREFIX_DEFAULT php artisan optimize:clear
+        $PREFIX_DEFAULT php artisan view:clear
+        $PREFIX_DEFAULT php artisan config:clear
+        $PREFIX_DEFAULT php artisan route:clear
+        $PREFIX_DEFAULT php artisan cache:clear
+        echo "✅ Alle Caches für Views, Routen, Configs und App-Daten wurden geflusht!"
+        ;;
+    test)
+        shift
+        if [ "$1" == "info" ]; then
+            echo -e "\n\033[1;36m📋 Verfügbare Test-Klassen:\033[0m\n"
+            find tests -type f -name '*Test.php' -exec basename {} .php \; | sort | paste -sd " " -
+            echo ""
+            exit 0
+        fi
+
+        if [ "$1" == "test-support-agent" ]; then
+            echo "🤖 Starte exklusiven KI-Stresstest (40 Fragen)..."
+            $PREFIX_DEFAULT php artisan app:test-support-agent
+            exit 0
+        fi
+
+        echo "🔐 Führe Berechtigungs-Fix aus..."
+        run_rights
+
+        echo "🧪 Aktualisiere Testing-Umgebung..."
+        $PREFIX_USER php artisan config:clear --env=testing
+        
+        TEST_EXIT_CODE=0
+        if [ -z "$1" ]; then
+            echo "🧪 Starte ALLE automatisierten Tests auf Test-Datenbank (seelenfunke_testing)..."
+            $PREFIX_USER php -d memory_limit=-1 artisan test --env=testing
+            TEST_EXIT_CODE=$?
+        elif [[ "$1" == --* ]]; then
+            echo "🧪 Starte Tests mit manuellen Parametern ($@)..."
+            $PREFIX_USER php -d memory_limit=-1 artisan test --env=testing "$@"
+            TEST_EXIT_CODE=$?
+        else
+            echo -e "🧪 Starte Isolationstest: \033[1;33m$1\033[0m"
+            $PREFIX_USER php -d memory_limit=-1 artisan test --env=testing --filter "$1"
+            TEST_EXIT_CODE=$?
+        fi
+
+        run_rights
+        exit $TEST_EXIT_CODE
+        ;;
+    artisan)
+        shift
+        $PREFIX_USER php artisan "$@"
+        ;;
+    *)
+        echo "💥 Funki ist bereit! Nutze 'funki info' für eine Übersicht aller Befehle."
+        exit 1
+        ;;
+esac
