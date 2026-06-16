@@ -1,6 +1,6 @@
 <footer class="relative text-white py-16 overflow-hidden">
     <div class="absolute inset-0">
-        <img src="{{ URL::to('/images/doka/bg.png') }}" alt="Footer Hintergrund" class="w-full h-full object-cover">
+        <img src="{{ URL::to('/images/doka/bg.webp') }}" alt="Footer Hintergrund" class="w-full h-full object-cover">
         <div class="absolute inset-0" style="background-color: rgba(30, 41, 55, 0.95);"></div>
     </div>
 

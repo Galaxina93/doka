@@ -1,6 +1,6 @@
-<div class="mx-auto pt-6">
+<div class="w-full">
     <!-- Navigation -->
-    <nav class="bg-primary shadow-lg fixed w-full top-0 z-50">
+    <nav class="bg-primary fixed w-full top-0 z-50" style="box-shadow: none !important; border: none !important;">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-32">
                 <!-- Logo -->

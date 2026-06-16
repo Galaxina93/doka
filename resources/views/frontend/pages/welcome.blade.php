@@ -5,7 +5,7 @@
         <!-- Hero Section -->
         <section id="home"
                  class="relative pt-16 overflow-hidden text-white"
-                 style="background: url('{{ URL::to('/images/doka/bg.png') }}') center/cover no-repeat;"
+                 style="background: url('{{ URL::to('/images/doka/bg.webp') }}') center/cover no-repeat;"
                  aria-label="Bollmann Hausservice - Ihr Partner für Handwerk und Gebäudeservice in Uetze und Umgebung">
 
             <div class="absolute inset-0 bg-black opacity-60"></div>
@@ -63,7 +63,7 @@
                 {{-- Leistung: 1. Innenausbau (Maler, Trockenbau) --}}
                 <article class="bg-white rounded-2xl shadow-lg overflow-hidden transition-transform hover:scale-105 motion-safe:animate-fadeIn flex flex-col" style="animation-delay: 0s;">
                     <figure>
-                        <img src="{{ URL::to('/images/doka/services/maler-ausbesserungsarbeiten.png') }}" alt="Maler- und Ausbesserungsarbeiten" class="w-full h-56 object-cover">
+                        <img src="{{ URL::to('/images/doka/services/maler-ausbesserungsarbeiten.webp') }}" alt="Maler- und Ausbesserungsarbeiten" class="w-full h-56 object-cover">
                     </figure>
                     <div class="bg-gradient-to-br from-primary to-primary-dark p-6">
                         <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4">
@@ -96,7 +96,7 @@
                 {{-- Leistung: 2. Boden- & Fugenarbeiten --}}
                 <article class="bg-white rounded-2xl shadow-lg overflow-hidden transition-transform hover:scale-105 motion-safe:animate-fadeIn flex flex-col" style="animation-delay: 0.2s;">
                     <figure>
-                        <img src="{{ URL::to('/images/doka/services/laminat-bodenverlegung.png') }}" alt="Laminat- und Bodenverlegung" class="w-full h-56 object-cover">
+                        <img src="{{ URL::to('/images/doka/services/laminat-bodenverlegung.webp') }}" alt="Laminat- und Bodenverlegung" class="w-full h-56 object-cover">
                     </figure>
                     <div class="bg-gradient-to-br from-primary to-primary-dark p-6">
                         <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4">
@@ -129,7 +129,7 @@
                 {{-- Leistung: 3. Hausmeisterservice --}}
                 <article class="bg-white rounded-2xl shadow-lg overflow-hidden transition-transform hover:scale-105 motion-safe:animate-fadeIn flex flex-col" style="animation-delay: 0.4s;">
                     <figure>
-                        <img src="{{ URL::to('/images/doka/services/hausmeisterservice.png') }}" alt="Hausmeisterservice Collage (Reparatur, Heckenschnitt)" class="w-full h-56 object-cover">
+                        <img src="{{ URL::to('/images/doka/services/hausmeisterservice.webp') }}" alt="Hausmeisterservice Collage (Reparatur, Heckenschnitt)" class="w-full h-56 object-cover">
                     </figure>
                     <div class="bg-gradient-to-br from-primary to-primary-dark p-6">
                         <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4">
@@ -162,7 +162,7 @@
                 {{-- Leistung: 4. Gebäudereinigung & Außenpflege --}}
                 <article class="bg-white rounded-2xl shadow-lg overflow-hidden transition-transform hover:scale-105 motion-safe:animate-fadeIn flex flex-col" style="animation-delay: 0.6s;">
                     <figure>
-                        <img src="{{ URL::to('/images/doka/services/gebaeudereinigung.png') }}" alt="Professionelle Gebäudereinigung einer Lobby" class="w-full h-56 object-cover">
+                        <img src="{{ URL::to('/images/doka/services/gebaeudereinigung.webp') }}" alt="Professionelle Gebäudereinigung einer Lobby" class="w-full h-56 object-cover">
                     </figure>
                     <div class="bg-gradient-to-br from-primary to-primary-dark p-6">
                         <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4">
@@ -195,7 +195,7 @@
                 {{-- Leistung: 5. Winterdienst --}}
                 <article class="bg-white rounded-2xl shadow-lg overflow-hidden transition-transform hover:scale-105 motion-safe:animate-fadeIn flex flex-col" style="animation-delay: 0.8s;">
                     <figure>
-                        <img src="{{ URL::to('/images/doka/services/winterdienst.png') }}" alt="Zuverlässiger Winterdienst mit Räumfahrzeug" class="w-full h-56 object-cover">
+                        <img src="{{ URL::to('/images/doka/services/winterdienst.webp') }}" alt="Zuverlässiger Winterdienst mit Räumfahrzeug" class="w-full h-56 object-cover">
                     </figure>
                     <div class="bg-gradient-to-br from-primary to-primary-dark p-6">
                         <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4">
@@ -228,7 +228,7 @@
                 {{-- Leistung: 6. Haushaltsauflösung --}}
                 <article class="bg-white rounded-2xl shadow-lg overflow-hidden transition-transform hover:scale-105 motion-safe:animate-fadeIn flex flex-col" style="animation-delay: 1s;">
                     <figure>
-                        <img src="{{ URL::to('/images/doka/services/haushaltsaufloesung.png') }}" alt="Haushaltsauflösung und Entrümplung" class="w-full h-56 object-cover">
+                        <img src="{{ URL::to('/images/doka/services/haushaltsaufloesung.webp') }}" alt="Haushaltsauflösung und Entrümplung" class="w-full h-56 object-cover">
                     </figure>
                     <div class="bg-gradient-to-br from-primary to-primary-dark p-6">
                         <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-4">

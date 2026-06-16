@@ -62,7 +62,7 @@
             @include('frontend.navigation.navigation')
         </header>
 
-        <main>
+        <main class="pt-32">
             <div>
                 {{ $slot }}
             </div>

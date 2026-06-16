@@ -4,7 +4,7 @@
     <x-sections.page-container>
         <!-- Service Hero Section -->
         <section class="relative pt-16 overflow-hidden text-white rounded-3xl mt-6 shadow-xl"
-                 style="background: url('{{ URL::to('/images/doka/bg.png') }}') center/cover no-repeat;"
+                 style="background: url('{{ URL::to('/images/doka/bg.webp') }}') center/cover no-repeat;"
                  aria-label="Renovierung und Trockenbau in Uetze">
             <div class="absolute inset-0 bg-gradient-to-r from-black via-black/85 to-transparent"></div>
             
@@ -43,7 +43,7 @@
                         </p>
                     </div>
                     <div>
-                        <img src="{{ URL::to('/images/doka/services/maler-ausbesserungsarbeiten.png') }}" alt="Maler- und Ausbesserungsarbeiten" class="w-full h-80 object-cover rounded-2xl shadow-lg">
+                        <img src="{{ URL::to('/images/doka/services/maler-ausbesserungsarbeiten.webp') }}" alt="Maler- und Ausbesserungsarbeiten" class="w-full h-80 object-cover rounded-2xl shadow-lg">
                     </div>
                 </div>
 

@@ -1,14 +1,30 @@
-<div class="relative">
+<div class="relative" wire:ignore>
     <div x-data="{
         swiper: null,
         initSwiper() {
-            this.swiper = new Swiper('.swiper', window.sliderConfig);
+            this.$nextTick(() => {
+                const swiperEl = this.$el.querySelector('.swiper');
+                const paginationEl = this.$el.querySelector('.swiper-pagination');
+                
+                // Read config safely from data attribute to prevent quote escaping issues
+                const config = JSON.parse(this.$el.dataset.sliderConfig);
+                config.navigation = false; // Let Alpine handle click events to prevent Swiper event listener issues
+                
+                if (paginationEl) {
+                    config.pagination = {
+                        el: paginationEl,
+                        clickable: true
+                    };
+                }
+                
+                this.swiper = new Swiper(swiperEl, config);
+            });
         }
-    }" x-init="initSwiper" class="relative">
+    }" x-init="initSwiper" data-slider-config="{{ json_encode($sliderConfig) }}" class="relative">
 
         <div
             class="swiper overflow-hidden rounded-xl shadow-xl border border-gray-200 bg-white"
-            style="width: 100%; height: 600px;">
+            style="width: 100%; height: 600px; --swiper-navigation-color: #ffffff; --swiper-pagination-color: #ffffff;">
 
             <div class="swiper-wrapper">
                 @foreach ($slides as $slide)
@@ -36,8 +52,8 @@
             @endif
 
             @if ($config['navigation_active'])
-                <div class="swiper-button-prev text-white z-10"></div>
-                <div class="swiper-button-next text-white z-10"></div>
+                <div @click="if (swiper) { swiper.slidePrev(); }" class="swiper-button-prev z-30 cursor-pointer" style="color: #ffffff !important; pointer-events: auto;"></div>
+                <div @click="if (swiper) { swiper.slideNext(); }" class="swiper-button-next z-30 cursor-pointer" style="color: #ffffff !important; pointer-events: auto;"></div>
             @endif
 
             @if ($config['scrollbar_active'])
@@ -45,10 +61,5 @@
             @endif
         </div>
 
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                window.sliderConfig = @json($sliderConfig);
-            });
-        </script>
     </div>
 </div>

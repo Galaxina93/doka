@@ -11,11 +11,13 @@ class HeaderSlider extends Component
     public array $sliderConfig = [
         'direction' => 'horizontal',
         'loop' => true,
-        'allowTouchMove' => false,
-        'pagination' => ['el' => '.swiper-pagination', 'clickable' => false],
-        // 'navigation' => ['nextEl' => '.swiper-button-next', 'prevEl' => '.swiper-button-prev'],
-        // 'scrollbar' => ['el' => '.swiper-scrollbar', 'draggable' => true],
-        'autoplay' => ['delay' => 4000],
+        'allowTouchMove' => true,
+        'pagination' => ['el' => '.swiper-pagination', 'clickable' => true],
+        'navigation' => ['nextEl' => '.swiper-button-next', 'prevEl' => '.swiper-button-prev'],
+        'autoplay' => [
+            'delay' => 4000,
+            'disableOnInteraction' => false,
+        ],
     ];
 
     public array $config = [
