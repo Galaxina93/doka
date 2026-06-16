@@ -297,7 +297,7 @@
                     <figure class="mb-6">
                         <img src="{{ URL::to('/images/doka/jessica_k.jpg') }}" alt="Portrait von Jessica K." class="w-40 h-40 rounded-full object-cover mx-auto shadow-md">
                     </figure>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Jessica K.</h3>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Jessica Konermann</h3>
                     <p class="text-primary font-semibold mb-4">Ansprechpartnerin Büro</p>
                     <p class="text-gray-600 mb-6 flex-1">
                         Ihre erste Anlaufstelle für organisatorische Fragen, Terminvereinbarungen und Angebote im Bereich Büro. Sie sorgt zuverlässig für den reibungslosen Ablauf im Hintergrund.
