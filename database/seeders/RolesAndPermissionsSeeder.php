@@ -46,11 +46,11 @@ class RolesAndPermissionsSeeder extends Seeder
 
         // 5. Admin-Benutzer erstellen und die Admin-Rolle zuweisen
         $admin = Admin::firstOrCreate(
-            ['email' => 'kontakt@doka-hausservice.de'], // Prüfen, ob der Admin schon existiert
+            ['email' => 'kontakt@hausservice-bollmann.de'], // Prüfen, ob der Admin schon existiert
             [ // Daten, falls er neu erstellt wird
-                'first_name' => 'Felix',
-                'last_name' => 'Machts',
-                'password' => Hash::make('FelixMachts.!*'),
+                'first_name' => 'Karsten',
+                'last_name' => 'Bollmann',
+                'password' => Hash::make('BollmannHausservice.!*'),
             ]
         );
         // Die entscheidende Zeile, die den Benutzer mit der Rolle verknüpft:
@@ -58,22 +58,22 @@ class RolesAndPermissionsSeeder extends Seeder
 
         // 6. Kunden-Benutzer erstellen und die Kunden-Rolle zuweisen
         $customer = Customer::firstOrCreate(
-            ['email' => 'kunde@doka-hausservice.com'],
+            ['email' => 'kunde@hausservice-bollmann.de'],
             [
                 'first_name' => 'Kunde',
-                'last_name' => 'Machts',
-                'password' => Hash::make('FelixMachts.!*'),
+                'last_name' => 'Bollmann',
+                'password' => Hash::make('BollmannHausservice.!*'),
             ]
         );
         $customer->roles()->sync($customerRole->id);
 
         // 7. Mitarbeiter-Benutzer erstellen und die Mitarbeiter-Rolle zuweisen
         $employee = Employee::firstOrCreate(
-            ['email' => 'mitarbeiter@doka-hausservice.com'],
+            ['email' => 'mitarbeiter@hausservice-bollmann.de'],
             [
                 'first_name' => 'Mitarbeiter',
-                'last_name' => 'Machts',
-                'password' => Hash::make('FelixMachts.!*'),
+                'last_name' => 'Bollmann',
+                'password' => Hash::make('BollmannHausservice.!*'),
             ]
         );
         $employee->roles()->sync($employeeRole->id);

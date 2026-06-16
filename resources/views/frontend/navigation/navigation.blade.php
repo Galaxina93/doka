@@ -12,21 +12,35 @@
 
                 <!-- Desktop Menü -->
                 <div class="hidden md:block">
-                    @if (Request::is('datenschutz') || Request::is('impressum') || Request::is('calculator'))
-                        <div class="ml-10 flex items-baseline space-x-8">
-                            <a href="/" class="text-white font-semibold hover:underline transition-colors">← Zurück zur Startseite</a>
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="/#home" class="text-white hover:text-gray-900 transition-colors font-semibold">Startseite</a>
+                        
+                        <!-- Dropdown für Leistungen -->
+                        <div class="relative group py-2">
+                            <button class="text-white hover:text-gray-900 transition-colors flex items-center gap-1 font-semibold focus:outline-none">
+                                Leistungen
+                                <svg class="w-4 h-4 transform group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <div class="absolute left-0 mt-2 w-64 bg-white rounded-xl shadow-xl py-2 hidden group-hover:block transition-all duration-300 z-50 border border-gray-100">
+                                <a href="/leistungen/renovierung" class="block px-4 py-2 text-gray-700 hover:bg-primary hover:text-white transition-colors text-sm font-semibold">Renovierung & Trockenbau</a>
+                                <a href="/leistungen/boden-und-fugenarbeiten" class="block px-4 py-2 text-gray-700 hover:bg-primary hover:text-white transition-colors text-sm font-semibold">Boden- & Fugenarbeiten</a>
+                                <a href="/leistungen/hausmeisterservice" class="block px-4 py-2 text-gray-700 hover:bg-primary hover:text-white transition-colors text-sm font-semibold">Hausmeisterservice</a>
+                                <a href="/leistungen/reinigung" class="block px-4 py-2 text-gray-700 hover:bg-primary hover:text-white transition-colors text-sm font-semibold">Reinigung (Innen & Außen)</a>
+                                <a href="/leistungen/winterdienst" class="block px-4 py-2 text-gray-700 hover:bg-primary hover:text-white transition-colors text-sm font-semibold">Winterdienst</a>
+                                <a href="/leistungen/haushaltsaufloesung" class="block px-4 py-2 text-gray-700 hover:bg-primary hover:text-white transition-colors text-sm font-semibold">Haushaltsauflösung</a>
+                                <div class="border-t border-gray-100 my-1"></div>
+                                <a href="/#services" class="block px-4 py-2 text-primary hover:bg-gray-50 transition-colors text-sm font-bold">Alle Leistungen anzeigen</a>
+                            </div>
                         </div>
-                    @else
-                        <div class="ml-10 flex items-baseline space-x-8">
-                            <a href="#home" class="text-white hover:text-gray-900 transition-colors">Startseite</a>
-                            <a href="#services" class="text-white hover:text-gray-900 transition-colors">Leistungen</a>
-                            <a href="#team" class="text-white hover:text-gray-900 transition-colors">Über uns</a>
-                            <a href="#reference" class="text-white hover:text-gray-900 transition-colors">Referenzen</a>
-                            <a href="#contact" class="text-white hover:text-gray-900 transition-colors">Kontakt</a>
-                        </div>
-                    @endif
+                        
+                        <a href="/#team" class="text-white hover:text-gray-900 transition-colors font-semibold">Über uns</a>
+                        <a href="/#reference" class="text-white hover:text-gray-900 transition-colors font-semibold">Referenzen</a>
+                        <a href="/#contact" class="text-white hover:text-gray-900 transition-colors font-semibold">Kontakt</a>
+                    </div>
                 </div>
-
+ 
                 <!-- Mobile Toggle Button -->
                 <div class="md:hidden">
                     <button id="mobile-menu-button" class="text-white hover:text-gray-200">
@@ -38,19 +52,27 @@
                 </div>
             </div>
         </div>
-
+ 
         <!-- Mobile menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
             <div class="px-2 pt-2 pb-3 space-y-1">
-                @if (Request::is('calculator'))
-                    <a href="/" class="block px-3 py-2 text-primary font-semibold">← Zurück zur Startseite</a>
-                @else
-                    <a href="#home" class="block px-3 py-2 text-gray-700 hover:text-primary">Startseite</a>
-                    <a href="#services" class="block px-3 py-2 text-gray-700 hover:text-primary">Leistungen</a>
-                    <a href="#team" class="block px-3 py-2 text-gray-700 hover:text-primary">Über uns</a>
-                    <a href="#reference" class="block px-3 py-2 text-gray-700 hover:text-primary">Referenzen</a>
-                    <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-primary">Kontakt</a>
-                @endif
+                <a href="/#home" class="block px-3 py-2 text-gray-700 hover:text-primary font-semibold">Startseite</a>
+                
+                <div class="px-3 py-2">
+                    <span class="text-gray-400 text-xs font-semibold uppercase tracking-wider">Leistungen</span>
+                    <div class="mt-1 pl-4 space-y-1">
+                        <a href="/leistungen/renovierung" class="block py-2 text-gray-600 hover:text-primary text-sm font-semibold">Renovierung & Trockenbau</a>
+                        <a href="/leistungen/boden-und-fugenarbeiten" class="block py-2 text-gray-600 hover:text-primary text-sm font-semibold">Boden- & Fugenarbeiten</a>
+                        <a href="/leistungen/hausmeisterservice" class="block py-2 text-gray-600 hover:text-primary text-sm font-semibold">Hausmeisterservice</a>
+                        <a href="/leistungen/reinigung" class="block py-2 text-gray-600 hover:text-primary text-sm font-semibold">Reinigung (Innen & Außen)</a>
+                        <a href="/leistungen/winterdienst" class="block py-2 text-gray-600 hover:text-primary text-sm font-semibold">Winterdienst</a>
+                        <a href="/leistungen/haushaltsaufloesung" class="block py-2 text-gray-600 hover:text-primary text-sm font-semibold">Haushaltsauflösung</a>
+                    </div>
+                </div>
+                
+                <a href="/#team" class="block px-3 py-2 text-gray-700 hover:text-primary font-semibold">Über uns</a>
+                <a href="/#reference" class="block px-3 py-2 text-gray-700 hover:text-primary font-semibold">Referenzen</a>
+                <a href="/#contact" class="block px-3 py-2 text-gray-700 hover:text-primary font-semibold">Kontakt</a>
             </div>
         </div>
     </nav>

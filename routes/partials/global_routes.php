@@ -28,6 +28,26 @@ Route::get('/forgot-password', function () {
     return view('global/pages/password/forgot-password');
 })->name('forgot-password');
 
+// Service Subpages
+Route::get('/leistungen/renovierung', function () {
+    return view('frontend.pages.services.renovierung');
+});
+Route::get('/leistungen/boden-und-fugenarbeiten', function () {
+    return view('frontend.pages.services.boden_und_fugenarbeiten');
+});
+Route::get('/leistungen/hausmeisterservice', function () {
+    return view('frontend.pages.services.hausmeisterservice');
+});
+Route::get('/leistungen/reinigung', function () {
+    return view('frontend.pages.services.reinigung');
+});
+Route::get('/leistungen/winterdienst', function () {
+    return view('frontend.pages.services.winterdienst');
+});
+Route::get('/leistungen/haushaltsaufloesung', function () {
+    return view('frontend.pages.services.haushaltsaufloesung');
+});
+
 
 Route::get('/', function () {
     $alreadyVisited = PageVisit::where('page', 'home')

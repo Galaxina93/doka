@@ -1,17 +1,25 @@
 import './bootstrap';
 
-/*Felix Machts JS*/
+/*Bollmann Hausservice JS*/
 
 // Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('a[href*="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+        const url = new URL(this.href, window.location.href);
+        if (url.pathname === window.location.pathname) {
+            const hash = url.hash;
+            if (hash) {
+                const target = document.querySelector(hash);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Mobilmenü schließen, falls geöffnet
+                    document.getElementById('mobile-menu')?.classList.add('hidden');
+                }
+            }
         }
     });
 });

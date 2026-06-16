@@ -34,19 +34,18 @@
                             </div>
                         </dl>
 
-                        <div class="mt-10">
-                            <h4 class="text-lg sm:text-xl font-semibold mb-3">Folgen Sie uns auf Social Media</h4>
+                        <!-- Social Media Icon -->
+                        <div class="mt-8 pt-8 border-t border-indigo-400/30">
+                            <h4 class="text-sm font-semibold text-indigo-200 uppercase tracking-wider mb-4">Folgen Sie uns</h4>
                             <div class="flex space-x-4">
-                                <a href="https://www.instagram.com/felixmachts/" target="_blank" rel="noopener noreferrer"
-                                   class="flex items-center space-x-2 hover:text-indigo-300">
-                                    <svg class="w-5 h-5 sm:w-6 sm:h-6 text-indigo-200" fill="currentColor" viewBox="0 0 24 24">
-                                        <path
-                                            d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zm4.25 3.75a4.5 4.5 0 110 9 4.5 4.5 0 010-9zm0 1.5a3 3 0 100 6 3 3 0 000-6zm4.75-.88a1.12 1.12 0 110 2.25 1.12 1.12 0 010-2.25z"/>
+                                <a href="https://www.tiktok.com/@kbhausservice?_r=1&_t=ZG-97FiZE8aCAa" target="_blank" rel="noopener noreferrer" class="text-white hover:text-indigo-200 transition-colors duration-200" title="TikTok">
+                                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M12.525.01c1.306-.022 2.616-.01 3.921-.018 0 1.954.912 3.652 2.611 4.542.008 1.284.004 2.569.004 3.853a8.16 8.16 0 0 1-4.745-1.637v6.865a6.452 6.452 0 0 1-6.402 6.442C5.361 20.089 3 17.514 3 14.512c0-3.327 2.822-5.968 6.136-5.882.1 0 .202.012.302.023v3.743c-.1-.016-.201-.03-.303-.03-1.296-.06-2.484.81-2.616 2.068-.198 1.905 1.603 3.32 3.35 2.766a2.66 2.66 0 0 0 1.76-2.528V.011Z" />
                                     </svg>
-                                    <span>Instagram</span>
                                 </a>
                             </div>
                         </div>
+
                     </div>
 
 

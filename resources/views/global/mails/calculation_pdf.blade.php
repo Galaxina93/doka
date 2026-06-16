@@ -94,7 +94,7 @@
 
 <!-- Header -->
 <div class="header">
-    <img src="{{ public_path('images/fmi/cropped-logo-felix.png') }}" alt="Bollmann Hausservice Logo">
+    <img src="{{ public_path('images/logo/logo.png') }}" alt="Bollmann Hausservice Logo">
     <h1>Bollmann Hausservice – Anfragebestätigung</h1>
 </div>
 

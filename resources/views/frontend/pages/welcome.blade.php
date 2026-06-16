@@ -73,13 +73,23 @@
                         </div>
                         <h3 class="text-2xl font-bold text-white mb-2">Renovierung</h3>
                     </div>
-                    <div class="p-6 flex-1">
-                        <p class="text-gray-600 mb-4">Frische Wände und neue Räume. Wir setzen Ihre Vorstellungen vom Anstrich bis zum Innenausbau professionell um.</p>
-                        <ul class="text-sm text-gray-500 space-y-1 list-disc list-inside">
-                            <li>Maler- & Ausbesserungsarbeiten</li>
-                            <li>Trockenbauarbeiten</li>
-                            <li>Wand- & Deckenverkleidung</li>
-                        </ul>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <p class="text-gray-600 mb-4">Frische Wände und neue Räume. Wir setzen Ihre Vorstellungen vom Anstrich bis zum Innenausbau professionell um.</p>
+                            <ul class="text-sm text-gray-500 space-y-1 list-disc list-inside mb-6">
+                                <li>Maler- & Ausbesserungsarbeiten</li>
+                                <li>Trockenbauarbeiten</li>
+                                <li>Wand- & Deckenverkleidung</li>
+                            </ul>
+                        </div>
+                        <div class="mt-auto">
+                            <a href="/leistungen/renovierung" class="inline-flex items-center text-primary font-semibold hover:text-primary-dark transition-colors group">
+                                Mehr Details erfahren
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 ml-1 transform transition-transform group-hover:translate-x-1">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </article>
 
@@ -96,13 +106,23 @@
                         </div>
                         <h3 class="text-2xl font-bold text-white mb-2">Boden- & Fugenarbeiten</h3>
                     </div>
-                    <div class="p-6 flex-1">
-                        <p class="text-gray-600 mb-4">Ein neuer Boden wertet jeden Raum auf. Wir verlegen fachgerecht und erneuern Abdichtungen präzise.</p>
-                        <ul class="text-sm text-gray-500 space-y-1 list-disc list-inside">
-                            <li>Laminat- & Bodenverlegung</li>
-                            <li>Silikon- & Fugenarbeiten</li>
-                            <li>Sockelleistenmontage</li>
-                        </ul>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <p class="text-gray-600 mb-4">Ein neuer Boden wertet jeden Raum auf. Wir verlegen fachgerecht und erneuern Abdichtungen präzise.</p>
+                            <ul class="text-sm text-gray-500 space-y-1 list-disc list-inside mb-6">
+                                <li>Laminat- & Bodenverlegung</li>
+                                <li>Silikon- & Fugenarbeiten</li>
+                                <li>Sockelleistenmontage</li>
+                            </ul>
+                        </div>
+                        <div class="mt-auto">
+                            <a href="/leistungen/boden-und-fugenarbeiten" class="inline-flex items-center text-primary font-semibold hover:text-primary-dark transition-colors group">
+                                Mehr Details erfahren
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 ml-1 transform transition-transform group-hover:translate-x-1">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </article>
 
@@ -119,13 +139,23 @@
                         </div>
                         <h3 class="text-2xl font-bold text-white mb-2">Hausmeisterservice</h3>
                     </div>
-                    <div class="p-6 flex-1">
-                        <p class="text-gray-600 mb-4">Ihr zuverlässiger Partner vor Ort. Wir kümmern uns um die technische Betreuung und Instandhaltung Ihrer Immobilie.</p>
-                        <ul class="text-sm text-gray-500 space-y-1 list-disc list-inside">
-                            <li>Rund-ums-Haus-Service</li>
-                            <li>Regelmäßige Objektkontrollen</li>
-                            <li>Kleinreparaturen & Wartung</li>
-                        </ul>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <p class="text-gray-600 mb-4">Ihr zuverlässiger Partner vor Ort. Wir kümmern uns um die technische Betreuung und Instandhaltung Ihrer Immobilie.</p>
+                            <ul class="text-sm text-gray-500 space-y-1 list-disc list-inside mb-6">
+                                <li>Rund-ums-Haus-Service</li>
+                                <li>Regelmäßige Objektkontrollen</li>
+                                <li>Kleinreparaturen & Wartung</li>
+                            </ul>
+                        </div>
+                        <div class="mt-auto">
+                            <a href="/leistungen/hausmeisterservice" class="inline-flex items-center text-primary font-semibold hover:text-primary-dark transition-colors group">
+                                Mehr Details erfahren
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 ml-1 transform transition-transform group-hover:translate-x-1">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </article>
 
@@ -142,13 +172,23 @@
                         </div>
                         <h3 class="text-2xl font-bold text-white mb-2">Reinigung (Innen & Außen)</h3>
                     </div>
-                    <div class="p-6 flex-1">
-                        <p class="text-gray-600 mb-4">Für einen sauberen und gepflegten ersten Eindruck. Wir reinigen zuverlässig Ihre Innen- und Außenbereiche.</p>
-                        <ul class="text-sm text-gray-500 space-y-1 list-disc list-inside">
-                            <li>Gebäudereinigung (z.B. Treppenhaus)</li>
-                            <li>Außenreinigung (Hof, Wege)</li>
-                            <li>Pflege von Parkplätzen</li>
-                        </ul>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <p class="text-gray-600 mb-4">Für einen sauberen und gepflegten ersten Eindruck. Wir reinigen zuverlässig Ihre Innen- und Außenbereiche.</p>
+                            <ul class="text-sm text-gray-500 space-y-1 list-disc list-inside mb-6">
+                                <li>Gebäudereinigung (z.B. Treppenhaus)</li>
+                                <li>Außenreinigung (Hof, Wege)</li>
+                                <li>Pflege von Parkplätzen</li>
+                            </ul>
+                        </div>
+                        <div class="mt-auto">
+                            <a href="/leistungen/reinigung" class="inline-flex items-center text-primary font-semibold hover:text-primary-dark transition-colors group">
+                                Mehr Details erfahren
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 ml-1 transform transition-transform group-hover:translate-x-1">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </article>
 
@@ -165,13 +205,23 @@
                         </div>
                         <h3 class="text-2xl font-bold text-white mb-2">Winterdienst</h3>
                     </div>
-                    <div class="p-6 flex-1">
-                        <p class="text-gray-600 mb-4">Sicher durch die kalte Jahreszeit. Wir sorgen für freie und sichere Wege gemäß den gesetzlichen Vorgaben.</p>
-                        <ul class="text-sm text-gray-500 space-y-1 list-disc list-inside">
-                            <li>Schnee- & Eisbeseitigung</li>
-                            <li>Streudienst für Wege & Parkplätze</li>
-                            <li>24/7-Bereitschaft im Winter</li>
-                        </ul>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <p class="text-gray-600 mb-4">Sicher durch die kalte Jahreszeit. Wir sorgen für freie und sichere Wege gemäß den gesetzlichen Vorgaben.</p>
+                            <ul class="text-sm text-gray-500 space-y-1 list-disc list-inside mb-6">
+                                <li>Schnee- & Eisbeseitigung</li>
+                                <li>Streudienst für Wege & Parkplätze</li>
+                                <li>24/7-Bereitschaft im Winter</li>
+                            </ul>
+                        </div>
+                        <div class="mt-auto">
+                            <a href="/leistungen/winterdienst" class="inline-flex items-center text-primary font-semibold hover:text-primary-dark transition-colors group">
+                                Mehr Details erfahren
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 ml-1 transform transition-transform group-hover:translate-x-1">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </article>
 
@@ -188,13 +238,23 @@
                         </div>
                         <h3 class="text-2xl font-bold text-white mb-2">Haushaltsauflösung</h3>
                     </div>
-                    <div class="p-6 flex-1">
-                        <p class="text-gray-600 mb-4">Wir schaffen Platz und Ordnung. Diskret, schnell und besenrein – von der Entrümplung bis zur Auflösung.</p>
-                        <ul class="text-sm text-gray-500 space-y-1 list-disc list-inside">
-                            <li>Komplette Haushaltsauflösungen</li>
-                            <li>Entrümplung (Keller, Dachboden)</li>
-                            <li>Fachgerechte Entsorgung</li>
-                        </ul>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <p class="text-gray-600 mb-4">Wir schaffen Platz und Ordnung. Diskret, schnell und besenrein – von der Entrümplung bis zur Auflösung.</p>
+                            <ul class="text-sm text-gray-500 space-y-1 list-disc list-inside mb-6">
+                                <li>Komplette Haushaltsauflösungen</li>
+                                <li>Entrümplung (Keller, Dachboden)</li>
+                                <li>Fachgerechte Entsorgung</li>
+                            </ul>
+                        </div>
+                        <div class="mt-auto">
+                            <a href="/leistungen/haushaltsaufloesung" class="inline-flex items-center text-primary font-semibold hover:text-primary-dark transition-colors group">
+                                Mehr Details erfahren
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 ml-1 transform transition-transform group-hover:translate-x-1">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </article>
 
@@ -334,7 +394,7 @@
         </section>
 
         <!--References Section-->
-        <section id="reference" class="hidden bg-white py-16 px-6 md:px-12">
+        <section id="reference" class="bg-white py-16 px-6 md:px-12">
             <div class="max-w-7xl mx-auto text-center mb-12">
                 <h2 class="text-4xl font-bold text-gray-900 mb-4">Was wir schon gemacht haben</h2>
                 <p class="text-lg text-gray-700 max-w-3xl mx-auto">Ein kleiner Einblick in unsere Arbeiten. Alle aufgezeigten Tätigkeiten wurden bei unterschiedlichen Kunden durchgeführt.</p>
